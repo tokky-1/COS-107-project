@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en-UK">
+			<meta charset="UFT-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="css file.css">
+			<title>GIVEAWAY</title>
+    </head>
+    <body>
+			<header id="title">GIVEAWAY TIME !</header>
+			<section>
+			<article >
+				<img class="phone" src="download.jpg" alt="s23 galaxy ultra" >
+			</article>
+			<article class="content">
+				<P class="Lorem">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				Aliquam eveniet dolor sint eligendi,eius 
+				voluptas ipsum iure at amet totam volupt 
+				atum hic repellat debitis libero molestiae harum incidunt! 
+				Consequuntur, mollitia!Lorem. Lorem ipsum dolor sit amet consectetur, 
+				adipisicing elit. Laboriosam amet tenetur quia sit sapiente voluptatum saepe 
+				perferendis. At veritatis soluta dolor nisi autem, numquam inventore labore 
+				tempora praesentium,asperiores amet.it ends when the timer hits zero!
+		</P>
+		<div>
+		<button id="survey" onclick="document.location='www.googleforms.com'" target="_blank">Click to be eligible </button>
+		</p>
+		<div class="launch-time">
+		<div class="time1">
+		<p id="days">00</p>
+		<span>Days</span>
+		</div>
+		<div class="time">
+		<p id="hours">00</p>
+		<span>Hours</span>
+		</div>
+		<div class="time">
+		<p id="minutes">00</p>
+		<span>Minutes</span>
+		</div>
+		<div class="time">
+		<p id="seconds">00</p>
+		<span>Seconds</span>
+		</div>
+		</div>
+			</article>
+			</section>			
+			<footer> 
+			<p class="end">Contact us at info@mycompany.com</p>
+			</footer>
+			<script>
+var countDown = new Date();
+countDown.setDate(countDown.getDate() + 10);
+var countdownInterval = setInterval(function() {
+var now = new Date();
+
+
+  var diffMs = (countDown - now);
+  var diffDays = Math.floor(diffMs / 86400000); // days
+  var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
+  var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+  var diffSecs = Math.round((((diffMs % 86400000) % 3600000) % 60000) / 1000); // seconds
+
+document.getElementById("days").innerHTML = diffDays;
+document.getElementById("hours").innerHTML =diffHrs;
+document.getElementById("minutes").innerHTML = diffMins;
+document.getElementById("seconds").innerHTML = diffSecs;
+
+
+  if (diffDays < 0) {
+    clearInterval(countdownInterval);
+    countDown.setDate(countDown.getDate() + 10);
+  }
+}, 1000);
+			</script>
+    </body>
+</html>
+
+
